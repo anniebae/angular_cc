@@ -22,26 +22,33 @@
       </h3>
     </li>
   </ul>
-  <section>
+  <section ng-controller="PanelController as panel">
     <ul class="nav nav-pills">
-      <li><a href ng-click="tab = 1">Description</a></li>
-      <li><a href ng-click="tab = 2">Specifications</a></li>
-      <li><a href ng-click="tab = 3">Reviews</a></li>
+      <!-- active - name of class to set. Expression to evaluate is true, set class to active -->
+      <li ng-class="{ active: panel.isSelected(1) }">
+        <a href ng-click="panel.selectTab(1)">Description</a>
+      </li>
+      <li ng-class="{ active: panel.isSelected(2) }">
+        <a href ng-click="panel.selectTab(2)">Specifications</a>
+      </li>
+      <li ng-class="{ active: panel.isSelected(3) }">
+        <a href ng-click="panel.selectTab(3)">Reviews</a>
+      </li>
     </ul>
     {{tab}}
+    <div class="panel" ng-show="panel.isSelected(1)">
+      <h4>Description</h4>
+      <p>{{product.description}}</p>
+    </div>
+    <div class="panel" ng-show="panel.isSelected(2)">
+      <h4>Specification</h4>
+      <p>None yet</p>
+    </div>
+    <div class="panel" ng-show="panel.isSelected(3)">
+      <h4>Reviews</h4>
+      <p>None yet</p>
+    </div>
   </section>
-  <div class="panel" ng-show="tab === 1">
-    <h4>Description</h4>
-    <p>{{product.description}}</p>
-  </div>
-  <div class="panel" ng-show="tab === 2">
-    <h4>Specification</h4>
-    <p>None yet</p>
-  </div>
-  <div class="panel" ng-show="tab === 3">
-    <h4>Reviews</h4>
-    <p>None yet</p>
-  </div>
 
   <script src="./js/lib/jquery.js"></script>
   <script src="./js/lib/angular.min.js"></script>
