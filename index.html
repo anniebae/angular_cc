@@ -11,14 +11,16 @@
 </head>
 <!-- ng-controller - attach a Controller function to the page -->
 <!-- ng-show/ng-hide - display a section based on an Expression -->
-<!-- ng-repeat - repeat a section for each item in an Array -->
+<!--   -->
 <body ng-controller="StoreController as store">
-  <div ng-repeat="product in store.products">
-    <h1>{{product.name}}</h1>
-    <h2>${{product.price}}</h2>
-    <p>{{product.description}}</p>
-    <button ng-show="store.product.canPurchase"> Add to Cart </button>
-  </div>
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="product in store.products">
+      <h3>
+        {{product.name}}
+        <em class="pull-right">{{product.price | currency}}</em>
+      </h3>
+    </li>
+  </ul>
 
   <script src="./js/lib/jquery.js"></script>
   <script src="./js/lib/angular.min.js"></script>
