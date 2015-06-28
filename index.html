@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- ng-app - attach the Application Module to the page -->
 <!-- ng-app is a directive -->
 <!-- treats html inside element as part of the angular app -->
 <html lang="en" ng-app="store">
@@ -8,6 +9,9 @@
   <link rel="stylesheet" href="./stylesheets/bootstrap.min.css">
   <link rel="stylesheet" href="./stylesheets/styles.css">
 </head>
+<!-- ng-controller - attach a Controller function to the page -->
+<!-- ng-show/ng-hide - display a section based on an Expression -->
+<!-- ng-repeat - repeat a section for each item in an Array -->
 <body ng-controller="StoreController as store">
   <div ng-repeat="product in store.products">
     <h1>{{product.name}}</h1>
