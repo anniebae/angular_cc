@@ -19,7 +19,7 @@
         {{product.name}}
         <em class="pull-right"> {{product.price | currency}}</em>
         <img ng-src="{{product.images[0].full}}">
-      </h3>
+      </h3> 
     </li>
   </ul>
   <section ng-controller="PanelController as panel">
@@ -46,7 +46,29 @@
     </div>
     <div class="panel" ng-show="panel.isSelected(3)">
       <h4>Reviews</h4>
-      <p>None yet</p>
+      <blockquote ng-repeat="review in product.reviews">
+        <b>Stars: {{review.stars}}</b>
+        {{review.body}}
+        <cite>by: {{review.author}}</cite>
+      </blockquote>
+      <form name="reviewForm">
+        <blockquote>
+          <b>Stars: {{review.stars}}</b>
+          {{review.body}}
+          <cite>by: {{review.author}}</cite>
+        </blockquote>
+        <select ng-model="review.stars">
+          <option value="1">1 star</option>
+          <option value="2">2 stars</option>
+          <option value="3">3 stars</option>
+          <option value="4">4 stars</option>
+          <option value="5">5 stars</option>
+        </select>
+        <textarea ng-model="review.body" name="" id="" cols="30" rows="10"></textarea>
+        <label>by: </label>
+        <input ng-model="review.author" type="email" />
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </section>
 
