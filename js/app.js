@@ -1,7 +1,12 @@
+// directives: HTML annotations that trigger JavaScript behaviors
+// modules: where out application compenents live
+// controllers: where we add application behavior
+// expressions: how values get displayed within the page
+
+  // controllers are where we define our app's behavior by defining functions and values
 
   var app = angular.module('store', []);
 
-  // controllers are where we define our app's behavior by defining functions and values
 
   app.controller("StoreController", function() {
     this.products = gems;
