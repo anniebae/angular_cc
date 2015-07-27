@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="store">
+  <!-- attach application module to the page -->
   <!--ng-app directive-->
 <head>
   <meta charset="UTF-8">
@@ -9,12 +10,23 @@
 </head>
 <body ng-controller="StoreController as store">
   <!--controller-->
-  <div ng-repeat="product in store.products">
-      <h1> {{product.name}} </h1>
-      <h2> ${{product.price}} </h2>
-      <p> {{product.description}} </p>
-      <button ng-show="product.canPurchase">Add to Cart</button>
-    </div>
+  <!-- attach controller function to the page -->
+
+    <ul class="list-group">
+      <li class="list-group-item" ng-repeat="product in store.products">
+        <h3>
+          {{product.name}}
+          <em class="pull-right">${{product.price}}</em>
+        </h3>
+      </li>
+    </ul>
+
+    <!-- ng-repeat -->
+    <!-- repeat a section for each item in an Array -->
+
+    <!-- ng-show -->
+    <!-- display a section based on an Expression -->
+
 
   <script src="js/lib/jquery.js"></script>
   <script src="js/lib/angular.min.js"></script>
