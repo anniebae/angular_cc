@@ -9,3 +9,7 @@ body {
 .ng-valid.ng-dirty {
   border-color: green;
 }
+
+.gem {
+  width: 50px;
+}

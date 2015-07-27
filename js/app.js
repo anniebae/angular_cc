@@ -18,8 +18,8 @@
     description: "......",
     images: [
       {
-        full: '',
-        thumb: ''
+        full: './stylesheets/images/dodecahedron.png',
+        thumb: './stylesheets/images/dodecahedron.png'
       },
       {
        full: './stylesheets/images/dodecahedron.png',
@@ -33,8 +33,8 @@
     description: ".......",
     images: [
       {
-        full: '',
-        thumb: ''
+        full: './stylesheets/images/dodecahedron.png',
+        thumb: './stylesheets/images/dodecahedron.png'
       },
       {
        full: './stylesheets/images/dodecahedron.png',
