@@ -22,16 +22,16 @@
     </li>
   </ul>
 
-  <section ng-init="tab = 1">
+  <section ng-init="tab = 1" ng-controller="PanelController as panel">
     <!-- ng-init allows to evaluate expression in the current scope -->
     <ul class="nav nav-pills">
-      <li ng-class="{{ active:tab == 1 }}">
+      <li ng-class="{{ active:tab === 1 }}">
         <a href ng-click="tab = 1">Decription</a>
       </li>
-      <li ng-class="{{ active:tab == 2 }}">
+      <li ng-class="{{ active:tab === 2 }}">
         <a href ng-click="tab = 2">Specifications</a>
       </li>
-      <li ng-class="{{ active:tab == 3 }}">
+      <li ng-class="{{ active:tab === 3 }}">
         <a href ng-click="tab = 3">Reviews</a>
       </li>
     </ul>
