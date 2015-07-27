@@ -12,15 +12,23 @@
   <!--controller-->
   <!-- attach controller function to the page -->
 
-    <ul class="list-group">
-      <li class="list-group-item" ng-repeat="product in store.products">
-        <h3>
-          {{product.name}}
-          <em class="pull-right">{{product.price | currency}}</em>
-          <img ng-src="{{product.images[0].full}}" class="gem">
-        </h3>
-      </li>
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="product in store.products">
+      <h3>
+        {{product.name}}
+        <em class="pull-right">{{product.price | currency}}</em>
+        <img ng-src="{{product.images[0].full}}" class="gem">
+      </h3>
+    </li>
+  </ul>
+
+  <section>
+    <ul class="nav nav-pills">
+      <li><a href="">Decription</a></li>
+      <li><a href="">Specifications</a></li>
+      <li><a href="">Reviews</a></li>
     </ul>
+  </section>
 
     <!-- ng-repeat -->
     <!-- repeat a section for each item in an Array -->
