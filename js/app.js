@@ -16,12 +16,30 @@
     name: 'Dodecahedron',
     price: 2,
     description: "......",
-    canPurchase: true,
+    images: [
+      {
+        full: '',
+        thumb: ''
+      },
+      {
+       full: './stylesheets/images/dodecahedron.png',
+       thumb: './stylesheets/images/dodecahedron.png' 
+      }
+    ]
   },
   {
     name: 'Pentagonal Gem',
     price: 5.95,
     description: ".......",
-    canPurchase: false,
+    images: [
+      {
+        full: '',
+        thumb: ''
+      },
+      {
+       full: './stylesheets/images/dodecahedron.png',
+       thumb: './stylesheets/images/dodecahedron.png' 
+      }
+    ]
   }
 ];
