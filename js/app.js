@@ -40,6 +40,8 @@
     this.isSelected = function(checkTab) {
       return this.tab === checkTab;
     }
+
+    
   });
 
   var gems = [
